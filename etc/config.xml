@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/config.xsd">
+    <default>
+        <carriers>
+            <pickupshipping>
+                <active>1</active>
+                <title>Entrega</title>
+                <name>Retirado na Loja</name>
+                <price>0.00</price>
+                <sort_order>10</sort_order>
+                <model>Daylan\PickupShipping\Model\Carrier\Pickup</model>
+            </pickupshipping>
+        </carriers>
+    </default>
+</config>
