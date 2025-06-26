@@ -1,0 +1,36 @@
+MODELO RELACIONAL - Módulo "Retirado na Loja" (PickupShipping)
+Versão do Magento: 2.4.6
+
+Tabelas envolvidas:
+
+1. quote_address
+----------------
+Descrição: Armazena o método de entrega selecionado no carrinho (cotação)
+
+Campos relevantes:
+- shipping_method           (varchar)   --> pickupshipping
+- shipping_description      (varchar)   --> Retirado na Loja
+
+2. sales_order
+--------------
+Descrição: Armazena o método de entrega utilizado após finalização do pedido
+
+Campos relevantes:
+- shipping_method           (varchar)   --> pickupshipping
+- shipping_description      (varchar)   --> Retirado na Loja
+- shipping_amount           (decimal)   --> 0.00
+- base_shipping_amount      (decimal)   --> 0.00
+
+3. setup_module
+---------------
+Descrição: Usada pelo Magento para registrar que o módulo está instalado
+
+Campos relevantes:
+- module                    (varchar)   --> Daylan_PickupShipping
+- schema_version            (varchar)   --> 1.0.0
+- data_version              (varchar)   --> 1.0.0
+
+Observações:
+- O módulo não cria novas tabelas.
+- Utiliza campos padrão do Magento para registrar o método de entrega.
+- Toda a lógica é implementada em código, respeitando a estrutura nativa.
